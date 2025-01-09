@@ -23,7 +23,16 @@ h2,
 h3 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
+    
+}
+
+h1,
+h2 {
     text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 2rem;
 }
 
 .sub-heading-color {
@@ -51,7 +60,16 @@ h3 {
     font-family: var(--secondary-font);
 }
 
+/* Services*/
+#services .card-footer {
+    font-weight: bold;
+    color: var(--highlight-color-light);
+    background-color: transparent;
+}
 
+#services .card {
+    margin-bottom: 1.5rem;
+}
 
 /* grid visualisation css for testing */
 /*
@@ -65,3 +83,33 @@ h3 {
     background-color: lightgray;
 }
 */ 
+
+/* Media Queries */
+
+/* Medium devices (tablets 768px and up */
+@media screen and (min-width: 768px) {
+    #services .card-body {
+        min-height: 191px;
+    }
+}
+
+/* Large devices (small laptops 992px and up */
+@media screen and (min-width: 992px) {
+    #services .card-body {
+        min-height: auto;
+    }
+}
+
+/* x-Large devices (large laptops 1200px and up */
+@media screen and (min-width: 1200px) {
+    #services .card-body {
+        min-height: 220px;
+    }
+}
+
+/* Extra extra Large devices (extra large screens 1400px and up */
+@media screen and (min-width: 1400px) {
+    #services .card-body {
+        min-height: 195px;
+    }
+}
