@@ -92,7 +92,7 @@ h2 {
 /* Services*/
 #services .card-footer {
     font-weight: bold;
-    color: var(--highlight-color-light);
+    color: var(--highlight-color);
     background-color: transparent;
 }
 
