@@ -251,7 +251,7 @@
           </table>
           <!-- Student Discount Button -->
           <div class="col-12 text-center">
-          <a href="booking.html" class="btn custom-button-filled">*Get 20% off with valid student ID</a>
+          <a href="booking.html" class="btn custom-button-filled mb-2">*Get 20% off with valid student ID</a>
           </div>
         </div>
 
@@ -344,6 +344,28 @@
   </script>
   <!-- font awesome kit code link -->
   <script src="https://kit.fontawesome.com/6455293cfc.js" crossorigin="anonymous"></script>
+
+  <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+<script>
+  document
+      .querySelectorAll(".navbar-collapse .nav-link")
+      .forEach((link) => {
+          link.addEventListener("click", function (e) {
+              let section = document.querySelector(e.target.getAttribute("href"));
+              if (section) {
+                  e.preventDefault(); // Prevent default anchor click behavior
+                  let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                  window.scroll({
+                      top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                      behavior: "smooth",
+                  });
+                  document
+                      .querySelector(".navbar-collapse")
+                      .classList.remove("show"); // Collapse navbar
+              }
+          });
+      });
+</script>
 </body>
 
 </html>
